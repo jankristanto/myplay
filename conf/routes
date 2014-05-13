@@ -3,8 +3,10 @@
 # ~~~~
 
 # Home page
-GET     /                                       Application.show
-
+GET     /                                       Application.list
+GET     /show                          			Application.show
+GET     /form                          			Application.form
+POST    /save                          			Application.save
 # Ignore favicon requests
 GET     /favicon.ico                            404
 

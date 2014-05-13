@@ -1,0 +1,39 @@
+<h3>Write, <span>a new post</span></h3>
+ 
+#{form @save()}
+ 
+    #{ifErrors}
+        <p class="error">
+            Please correct these errors.
+        </p>
+    #{/ifErrors}
+     
+    <p>
+        #{field 'fullname'}
+        <label>User Fullname:</label>
+        <input type="text" name="${field.name}" 
+            value="${user?.fullname}" />
+        <span class="error">#{error 'user.fullname' /}</span>
+        #{/field}
+    </p>
+ 
+    <p>
+        #{field 'email'}
+        <label>User email:</label>
+        <input name="${field.name}" value="${user?.email}"></input>
+        <span class="error">#{error 'user.email' /}</span>
+        #{/field}
+    </p>
+     <p>
+        #{field 'password'}
+        <label>User password:</label>
+        <input name="${field.name}" value="${user?.password}"></input>
+        <span class="error">#{error 'user.password' /}</span>
+        #{/field}
+    </p>
+ 
+    <p>
+        <input type="submit" value="Save" />
+    </p>
+    
+#{/form}

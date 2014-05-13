@@ -1,0 +1,6 @@
+#{list items:users, as:'user'}
+        <h2 >
+            <a href="@{Application.form(user.email)}">${user.fullname}</a>
+        </h2>
+#{/list}
+<a href="@{Application.form()}">Create New User</a>
