@@ -13,4 +13,5 @@ public class User extends Model {
         this.password = password;
         this.fullname = fullname;
     }
+    public static void test(){}
 }
